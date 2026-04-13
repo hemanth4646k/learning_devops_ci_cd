@@ -1,0 +1,25 @@
+1. set up ./github/workflows directory
+2. add a deploy.yml file
+ -- this file is used to automate processes when a certain github action is performed
+ -- ex> when code is pushed then run the following script
+
+3. start and ssh into remote server
+
+4. create a new secret key pair (ON LOCAL MACHINE)
+ -- using:  ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+ -- select / create the file at desired location
+ -- copy the private key using
+   ---- $ cat SECRET_KEY_NAME | clip  //copies to clipboard
+5. add the secret to github repo where we want ci/cd
+   -- goto github repo -> settings -> secrets and variables -> actions 
+   -- select add new repository secret
+   -- name the key
+   -- paste the secret key in the field and save
+
+6. copy the pub key and append it to .ssh/authorized_keys file in remote server
+  -- nano .ssh/authorized_keys
+  -- use down arrow to go to bottom most part, press enter to start a new line
+  -- paste the pubkey
+  -- ctrl+o (save) then enter and ctrl+x (exit nano)
+
+7. 
