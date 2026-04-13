@@ -22,4 +22,8 @@
   -- paste the pubkey
   -- ctrl+o (save) then enter and ctrl+x (exit nano)
 
-7. 
+7. setup node env, pm2 and clone a backend server
+
+8. add the deploy script
+
+9. test by going to the server url:8080
