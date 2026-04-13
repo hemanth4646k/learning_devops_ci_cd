@@ -19,6 +19,6 @@ jobs:
         with:
           host: 13.53.126.242
           username: ubuntu
-          key: ${{ secrets.PRIVATE_SSH_KEY }}
+          key: ${{ secrets.PRIVATE_SSH_KEY_GITHUB_ACTIONS }}
           port: 22
           script: whoami
