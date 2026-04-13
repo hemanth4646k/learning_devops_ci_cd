@@ -22,7 +22,7 @@ jobs:
           key: ${{ secrets.PRIVATE_SSH_KEY_GITHUB_ACTIONS }}
           port: 22
           script: |
-            cd sum-server
+            cd learning_devops_ci_cd
             git pull origin main
             npm install
             pm2 restart sum-server || pm2 start index.js --name "sum-server"
